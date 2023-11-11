@@ -123,24 +123,61 @@ const Sidebar2 = () => {
   return (
     <Box
       sx={{
-        '& .pro-sidebar-inner': {
-          background: `${colors.primary[400]} !important`,
+        position: 'sticky',
+        display: 'flex',
+        height: '100vh',
+        top: 0,
+        bottom: 0,
+        zIndex: 10000,
+        '& .sidebar': {
+          border: 'none',
         },
-        '& .pro-icon-wrapper': {
+        '& .menu-icon': {
           backgroundColor: 'transparent !important',
         },
-        '& .pro-inner-item': {
-          padding: '5px 35px 5px 20px !important',
+        '& .menu-item': {
+          // padding: "5px 35px 5px 20px !important",
+          backgroundColor: 'transparent !important',
         },
-        '& .pro-inner-item:hover': {
-          color: '#868dfb !important',
+        '& .menu-anchor': {
+          color: 'inherit !important',
+          backgroundColor: 'transparent !important',
         },
-        '& .pro-menu-item.active': {
-          color: '#6870fa !important',
+        '& .menu-item:hover': {
+          color: `${colors.blueAccent[500]} !important`,
+          backgroundColor: 'transparent !important',
+        },
+        '& .menu-item.active': {
+          color: `${colors.greenAccent[500]} !important`,
+          backgroundColor: 'transparent !important',
         },
       }}
+      // rootStyles={{
+      //   `& .pro-sidebar-inner`: {
+      //     backgroundColor: 'red',
+      //   },
+      // }}
+
+      // backgroundColor="green"
+      // sx={{
+      //   '& .ps-sidebar-container': {
+      //     background: `${colors.primary[200]} !important`,
+      //   },
+      //   '& .ps-menu-root': {
+      //     backgroundColor: 'transparent !important',
+      //   },
+      //   '& .pro-inner-item': {
+      //     padding: '5px 35px 5px 20px !important',
+      //   },
+      //   '& .pro-inner-item:hover': {
+      //     color: '#868dfb !important',
+      //   },
+      //   '& .pro-menu-item.active': {
+      //     color: '#6870fa !important',
+      //   },
+      // }}
     >
-      <Sidebar collapsed={isCollapsed}>
+      <Sidebar collapsed={isCollapsed} backgroundColor={colors.primary[400]}>
         <Menu iconShape="square">
           {/* LOGO AND MENU ICON */}
           <MenuItem
@@ -159,7 +196,7 @@ const Sidebar2 = () => {
                 ml="15px"
               >
                 <Typography variant="h3" color={colors.grey[100]}>
-                  ADMINIS
+                  ADMIN
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
@@ -169,27 +206,27 @@ const Sidebar2 = () => {
           </MenuItem>
 
           {!isCollapsed && (
-            <Box mb="25px">
+            <Box mb="20px">
               <Box display="flex" justifyContent="center" alignItems="center">
                 <img
                   alt="profile-user"
-                  width="100px"
-                  height="100px"
+                  width="70px"
+                  height="70px"
                   src={`../../assets/user.png`}
                   style={{ cursor: 'pointer', borderRadius: '50%' }}
                 />
               </Box>
               <Box textAlign="center">
                 <Typography
-                  variant="h2"
+                  variant="h3"
                   color={colors.grey[100]}
                   fontWeight="bold"
                   sx={{ m: '10px 0 0 0' }}
                 >
-                  Maksym Burynskyi
+                  Maksym
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  VP Fancy Admin
+                  {/* Admin */}
                 </Typography>
               </Box>
             </Box>
