@@ -124,8 +124,8 @@ const Sidebar2 = () => {
     <Box
       sx={{
         position: 'sticky',
-        display: 'flex',
-        height: '100vh',
+        // display: 'flex',
+        // height: '100vh',
         top: 0,
         bottom: 0,
         zIndex: 10000,
