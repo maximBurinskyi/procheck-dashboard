@@ -51,7 +51,7 @@ const Sidebar = () => {
           backgroundColor: 'transparent !important',
         },
         '& .pro-inner-item': {
-          padding: '5px 35px 5px 20px !important',
+          padding: '5px 20px 5px 20px !important',
         },
         '& .pro-inner-item:hover': {
           color: '#868dfb !important',
@@ -68,7 +68,7 @@ const Sidebar = () => {
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
             style={{
-              margin: '10px 0 20px 0',
+              margin: '10px 0 15px 0',
               color: colors.grey[100],
             }}
           >
@@ -77,7 +77,7 @@ const Sidebar = () => {
                 display="flex"
                 justifyContent="space-between"
                 alignItems="center"
-                ml="15px"
+                ml="20px"
               >
                 <Typography variant="h3" color={colors.grey[100]}>
                   ADMINS
@@ -90,28 +90,28 @@ const Sidebar = () => {
           </MenuItem>
 
           {!isCollapsed && (
-            <Box mb="25px">
+            <Box mb="10px">
               <Box display="flex" justifyContent="center" alignItems="center">
                 <img
                   alt="profile-user"
-                  width="100px"
-                  height="100px"
+                  width="50px"
+                  height="50px"
                   src={`../../assets/user.png`}
                   style={{ cursor: 'pointer', borderRadius: '50%' }}
                 />
               </Box>
               <Box textAlign="center">
                 <Typography
-                  variant="h2"
+                  variant="h4"
                   color={colors.grey[100]}
                   fontWeight="bold"
                   sx={{ m: '10px 0 0 0' }}
                 >
                   Maksym Bur
                 </Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]}>
+                {/* <Typography variant="h5" color={colors.greenAccent[500]}>
                   VP Admin
-                </Typography>
+                </Typography> */}
               </Box>
             </Box>
           )}
